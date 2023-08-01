@@ -27,7 +27,7 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="ie8-rC-v7Z" kind="show" id="rUA-W2-YdT"/>
+                                    <action selector="detailButtonAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Hh-7i-nSk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -46,6 +46,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="ie8-rC-v7Z" kind="show" identifier="toDetail" id="fwc-Js-GQa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -54,7 +57,7 @@
         <!--Detail Page-->
         <scene sceneID="Nrg-vE-3fY">
             <objects>
-                <viewController id="ie8-rC-v7Z" customClass="TodoDetailVC" customModule="TodoApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ie8-rC-v7Z" customClass="DetailTodoVC" customModule="TodoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3JI-Be-5T5">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,6 +79,9 @@
                                     </backgroundConfiguration>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="updateButtonAct:" destination="ie8-rC-v7Z" eventType="touchUpInside" id="v3U-AT-oAp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="p1b-WZ-IMr"/>
@@ -89,6 +95,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Detail Page" id="ZkC-gS-SJD"/>
+                    <connections>
+                        <outlet property="todoTextField" destination="2Fn-3i-hHF" id="meT-OB-Gvz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ZQ-GQ-q9j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -126,6 +135,9 @@
                                     </backgroundConfiguration>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="saveButtonAct:" destination="2Er-E9-8Dz" eventType="touchUpInside" id="cwW-dy-nbw"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xUX-2s-cuB"/>
@@ -141,6 +153,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Todo" id="Ea7-eG-d2R"/>
+                    <connections>
+                        <outlet property="todoTextField" destination="5qc-Hj-40F" id="Tmc-VX-O0v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HBC-go-MaY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
