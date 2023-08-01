@@ -13,6 +13,7 @@ class AddTodoVC: UIViewController {
     @IBOutlet weak var todoTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.tintColor = .systemOrange
     }
     
     @IBAction func saveButtonAct(_ sender: UIButton) {
