@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qPb-ic-dxt">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -8,55 +8,170 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home PageVC-->
+        <!--Home Page-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomePageVC" customModule="TodoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmg-RG-YOe">
+                                <rect key="frame" x="108.33333333333333" y="407.66666666666669" width="176.66666666666669" height="37"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Go to detail page">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="ie8-rC-v7Z" kind="show" id="rUA-W2-YdT"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cmg-RG-YOe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Ir-2Z-bkd"/>
+                            <constraint firstItem="cmg-RG-YOe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SPT-Fj-mXC"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Home Page" id="yGi-iW-prq">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="jxP-VY-Q3L">
+                            <color key="tintColor" systemColor="systemOrangeColor"/>
+                            <connections>
+                                <segue destination="2Er-E9-8Dz" kind="show" identifier="toAdd" id="FkL-zZ-umP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="118" y="-2"/>
+            <point key="canvasLocation" x="1043.5114503816794" y="-2.1126760563380285"/>
         </scene>
-        <!--Todo DetailVC-->
+        <!--Detail Page-->
         <scene sceneID="Nrg-vE-3fY">
             <objects>
                 <viewController id="ie8-rC-v7Z" customClass="TodoDetailVC" customModule="TodoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3JI-Be-5T5">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Do homework" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Fn-3i-hHF">
+                                <rect key="frame" x="20" y="179" width="353" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDo-do-4gG">
+                                <rect key="frame" x="273" y="233" width="100" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="elx-Ws-ijn"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Update">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="p1b-WZ-IMr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2Fn-3i-hHF" firstAttribute="leading" secondItem="p1b-WZ-IMr" secondAttribute="leading" constant="20" id="PRr-Bz-hOu"/>
+                            <constraint firstItem="2Fn-3i-hHF" firstAttribute="top" secondItem="p1b-WZ-IMr" secondAttribute="top" constant="24" id="Xgy-eM-JnP"/>
+                            <constraint firstItem="UDo-do-4gG" firstAttribute="top" secondItem="2Fn-3i-hHF" secondAttribute="bottom" constant="20" id="dbb-2S-b26"/>
+                            <constraint firstItem="p1b-WZ-IMr" firstAttribute="trailing" secondItem="2Fn-3i-hHF" secondAttribute="trailing" constant="20" id="dia-2l-wps"/>
+                            <constraint firstItem="p1b-WZ-IMr" firstAttribute="trailing" secondItem="UDo-do-4gG" secondAttribute="trailing" constant="20" id="hZJ-y9-Krp"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Detail Page" id="ZkC-gS-SJD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ZQ-GQ-q9j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="953" y="428"/>
+            <point key="canvasLocation" x="1878.6259541984732" y="427.46478873239437"/>
         </scene>
-        <!--Add TodoVC-->
+        <!--Add Todo-->
         <scene sceneID="E8e-Pc-5aO">
             <objects>
                 <viewController id="2Er-E9-8Dz" customClass="AddTodoVC" customModule="TodoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TRR-3h-Us4">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="todo" translatesAutoresizingMaskIntoConstraints="NO" id="0Mv-Vs-1v8">
+                                <rect key="frame" x="76.666666666666686" y="175" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="o8a-Rw-4RF"/>
+                                    <constraint firstAttribute="width" constant="240" id="tXr-Mi-hs0"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please entry todo..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5qc-Hj-40F">
+                                <rect key="frame" x="20" y="323" width="353" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lTw-Bi-i9o">
+                                <rect key="frame" x="273" y="377" width="100" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="bK5-Tk-Wnh"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="xUX-2s-cuB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0Mv-Vs-1v8" firstAttribute="top" secondItem="xUX-2s-cuB" secondAttribute="top" constant="20" id="9RE-yi-V5y"/>
+                            <constraint firstItem="0Mv-Vs-1v8" firstAttribute="centerX" secondItem="TRR-3h-Us4" secondAttribute="centerX" id="TuX-eN-0nI"/>
+                            <constraint firstItem="5qc-Hj-40F" firstAttribute="leading" secondItem="xUX-2s-cuB" secondAttribute="leading" constant="20" id="Zdn-Wx-EYc"/>
+                            <constraint firstItem="lTw-Bi-i9o" firstAttribute="top" secondItem="5qc-Hj-40F" secondAttribute="bottom" constant="20" id="mz4-yY-FTE"/>
+                            <constraint firstItem="5qc-Hj-40F" firstAttribute="top" secondItem="0Mv-Vs-1v8" secondAttribute="bottom" constant="20" id="tvK-5H-r2Q"/>
+                            <constraint firstItem="xUX-2s-cuB" firstAttribute="trailing" secondItem="5qc-Hj-40F" secondAttribute="trailing" constant="20" id="wyV-gN-Rgc"/>
+                            <constraint firstItem="xUX-2s-cuB" firstAttribute="trailing" secondItem="lTw-Bi-i9o" secondAttribute="trailing" constant="20" id="xGw-si-E8d"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Add Todo" id="Ea7-eG-d2R"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HBC-go-MaY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="918" y="-410"/>
+            <point key="canvasLocation" x="1843.5114503816794" y="-410.56338028169017"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5Nc-eh-Lb0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qPb-ic-dxt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="xQa-xi-ail">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="M80-ZP-9a9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q9b-7T-7c0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116.79389312977099" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>
+        <image name="todo" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
