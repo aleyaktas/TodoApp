@@ -16,6 +16,7 @@
 		A64BBC272A78ED870061ACD8 /* DetailTodoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64BBC262A78ED870061ACD8 /* DetailTodoVC.swift */; };
 		A64BBC292A78ED940061ACD8 /* AddTodoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64BBC282A78ED940061ACD8 /* AddTodoVC.swift */; };
 		A64BBC2D2A78F20D0061ACD8 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64BBC2C2A78F20D0061ACD8 /* Todo.swift */; };
+		A6D4C44A2A7D06D900369064 /* TodoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D4C4492A7D06D900369064 /* TodoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		A64BBC262A78ED870061ACD8 /* DetailTodoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTodoVC.swift; sourceTree = "<group>"; };
 		A64BBC282A78ED940061ACD8 /* AddTodoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoVC.swift; sourceTree = "<group>"; };
 		A64BBC2C2A78F20D0061ACD8 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		A6D4C4492A7D06D900369064 /* TodoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		A64BBC222A78ED030061ACD8 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				A6D4C4482A7D06C300369064 /* tableview */,
 				A64BBC252A78ED460061ACD8 /* views */,
 			);
 			path = ui;
@@ -106,6 +109,14 @@
 				A64BBC2C2A78F20D0061ACD8 /* Todo.swift */,
 			);
 			path = entity;
+			sourceTree = "<group>";
+		};
+		A6D4C4482A7D06C300369064 /* tableview */ = {
+			isa = PBXGroup;
+			children = (
+				A6D4C4492A7D06D900369064 /* TodoCell.swift */,
+			);
+			path = tableview;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +192,7 @@
 			files = (
 				A64BBC132A78ECA00061ACD8 /* HomePageVC.swift in Sources */,
 				A64BBC2D2A78F20D0061ACD8 /* Todo.swift in Sources */,
+				A6D4C44A2A7D06D900369064 /* TodoCell.swift in Sources */,
 				A64BBC0F2A78ECA00061ACD8 /* AppDelegate.swift in Sources */,
 				A64BBC112A78ECA00061ACD8 /* SceneDelegate.swift in Sources */,
 				A64BBC292A78ED940061ACD8 /* AddTodoVC.swift in Sources */,

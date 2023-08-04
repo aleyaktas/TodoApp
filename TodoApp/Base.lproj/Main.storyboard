@@ -16,26 +16,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmg-RG-YOe">
-                                <rect key="frame" x="108.33333333333333" y="407.66666666666669" width="176.66666666666669" height="37"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Go to detail page">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="FjC-bL-kj9">
+                                <rect key="frame" x="0.0" y="155" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="detailButtonAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Hh-7i-nSk"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="HqB-81-J6I"/>
                                 </connections>
-                            </button>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YsA-pD-TKK">
+                                <rect key="frame" x="0.0" y="211" width="393" height="607"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="todoCell" id="6W3-Po-mF5" customClass="TodoCell" customModule="TodoApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6W3-Po-mF5" id="4Jk-YM-C32">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Klo-JJ-FWf">
+                                                    <rect key="frame" x="36" y="35.666666666666664" width="56.666666666666657" height="28.666666666666664"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Klo-JJ-FWf" firstAttribute="leading" secondItem="4Jk-YM-C32" secondAttribute="leadingMargin" constant="16" id="YIt-9D-OYh"/>
+                                                <constraint firstItem="Klo-JJ-FWf" firstAttribute="centerY" secondItem="4Jk-YM-C32" secondAttribute="centerY" id="myP-F6-lun"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="todoText" destination="Klo-JJ-FWf" id="VvS-oz-HXv"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="cmg-RG-YOe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Ir-2Z-bkd"/>
-                            <constraint firstItem="cmg-RG-YOe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SPT-Fj-mXC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YsA-pD-TKK" secondAttribute="bottom" id="0MY-G5-wft"/>
+                            <constraint firstItem="FjC-bL-kj9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="C2q-tq-dF1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YsA-pD-TKK" secondAttribute="trailing" id="CFP-d7-tIj"/>
+                            <constraint firstItem="FjC-bL-kj9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TRU-P2-u9M"/>
+                            <constraint firstItem="FjC-bL-kj9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="o7Q-IB-5Kn"/>
+                            <constraint firstItem="YsA-pD-TKK" firstAttribute="top" secondItem="FjC-bL-kj9" secondAttribute="bottom" id="rH0-iF-KZl"/>
+                            <constraint firstItem="YsA-pD-TKK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vgq-hQ-dnp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home Page" id="yGi-iW-prq">
@@ -47,6 +74,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="searchBar" destination="FjC-bL-kj9" id="ykj-9l-qLs"/>
+                        <outlet property="todoTableView" destination="YsA-pD-TKK" id="X8V-W1-yOa"/>
                         <segue destination="ie8-rC-v7Z" kind="show" identifier="toDetail" id="fwc-Js-GQa"/>
                     </connections>
                 </viewController>
