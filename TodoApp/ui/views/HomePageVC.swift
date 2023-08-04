@@ -62,5 +62,27 @@ extension HomePageVC: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let todo = todoList[indexPath.row]
+        performSegue(withIdentifier: "toDetail", sender: todo)
+        tableView.deselectRow(at: indexPath, animated: true) // it is deleselection when back to page
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") {_,_,_ in
+            let todo = self.todoList[indexPath.row]
+            let alert = UIAlertController(title: "Delete Todo", message: "Delete \(todo.todo_name) todo?", preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+            alert.addAction(cancelAction)
+
+            let okeyAction = UIAlertAction(title: "Delete", style: .destructive) {
+                action in
+                print("Delete todo: \(todo.todo_name)")
+            }
+            alert.addAction(okeyAction)
+            self.present(alert, animated: true)
+        }
+        return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
     
 }

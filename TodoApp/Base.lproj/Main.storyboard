@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home Page-->
+        <!--My Todo List-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomePageVC" customModule="TodoApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -35,7 +35,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Klo-JJ-FWf">
-                                                    <rect key="frame" x="36" y="35.666666666666664" width="56.666666666666657" height="28.666666666666664"/>
+                                                    <rect key="frame" x="36" y="35.666666666666664" width="321" height="28.666666666666664"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -44,6 +44,7 @@
                                             <constraints>
                                                 <constraint firstItem="Klo-JJ-FWf" firstAttribute="leading" secondItem="4Jk-YM-C32" secondAttribute="leadingMargin" constant="16" id="YIt-9D-OYh"/>
                                                 <constraint firstItem="Klo-JJ-FWf" firstAttribute="centerY" secondItem="4Jk-YM-C32" secondAttribute="centerY" id="myP-F6-lun"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Klo-JJ-FWf" secondAttribute="trailing" constant="16" id="weK-7u-CpE"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -65,7 +66,7 @@
                             <constraint firstItem="YsA-pD-TKK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vgq-hQ-dnp"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Home Page" id="yGi-iW-prq">
+                    <navigationItem key="navigationItem" title="My Todo List" id="yGi-iW-prq">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="jxP-VY-Q3L">
                             <color key="tintColor" systemColor="systemOrangeColor"/>
                             <connections>
@@ -99,7 +100,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDo-do-4gG">
                                 <rect key="frame" x="273" y="257" width="100" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="elx-Ws-ijn"/>
+                                    <constraint firstAttribute="width" constant="100" id="eNP-64-fKx"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Update">
