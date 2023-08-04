@@ -18,6 +18,7 @@ class DetailTodoVC: UIViewController {
         if let todo {
             todoTextField.text = todo.todo_name
         }
+        navigationController?.navigationBar.tintColor = .systemOrange
     }
 
     
