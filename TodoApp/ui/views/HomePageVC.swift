@@ -19,6 +19,15 @@ class HomePageVC: UIViewController {
         searchBar.delegate = self
         todoTableView.delegate = self
         todoTableView.dataSource = self
+        
+        let todo1 = Todo(todo_id: 1, todo_name: "Do homework")
+        let todo2 = Todo(todo_id: 2, todo_name: "Attend lesson at 8:00")
+        let todo3 = Todo(todo_id: 3, todo_name: "Read a book")
+        
+        todoList.append(todo1)
+        todoList.append(todo2)
+        todoList.append(todo3)
+        
     }
     
  
@@ -41,12 +50,16 @@ extension HomePageVC: UISearchBarDelegate {
 
 extension HomePageVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return todoList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let hucre = tableView.dequeueReusableCell(withIdentifier: "userCell") as! UserCell
-        return hucre
+        
+        let todo = todoList[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "todoCell") as! TodoCell
+        cell.todoText.text = todo.todo_name
+        
+        return cell
     }
     
     
