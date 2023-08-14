@@ -8,10 +8,11 @@
 import UIKit
 
 class DetailTodoVC: UIViewController {
-    
-    var todo:Todo?
 
     @IBOutlet weak var todoTextField: UITextField!
+    
+    var todo:Todo?
+    var viewModel = DetailTodoVM()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +26,10 @@ class DetailTodoVC: UIViewController {
     @IBAction func updateButtonAct(_ sender: UIButton) {
         if let todoName = todoTextField.text,
            let todo {
-            update(todo_id: todo.todo_id, todo_name: todoName)
+            viewModel.update(todo_id: todo.todo_id, todo_name: todoName)
         }
     }
     
-    func update(todo_id:Int,todo_name:String) {
-        print("Update Todo \(todo_id) \(todo_name)")
-    }
+
 
 }

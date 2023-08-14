@@ -9,10 +9,11 @@ import UIKit
 
 class HomePageVC: UIViewController {
     
-    var todoList = [Todo]()
-
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var todoTableView: UITableView!
+    
+    var todoList = [Todo]()
+    var viewModel = HomePageVM()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,14 +21,14 @@ class HomePageVC: UIViewController {
         todoTableView.delegate = self
         todoTableView.dataSource = self
         
-        let todo1 = Todo(todo_id: 1, todo_name: "Do homework")
-        let todo2 = Todo(todo_id: 2, todo_name: "Attend lesson at 8:00")
-        let todo3 = Todo(todo_id: 3, todo_name: "Read a book")
-        
-        todoList.append(todo1)
-        todoList.append(todo2)
-        todoList.append(todo3)
-        
+        _ = viewModel.todoList.subscribe(onNext: {list in
+            self.todoList = list
+            self.todoTableView.reloadData()
+        })
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel.uploadTodos()
     }
     
  
@@ -44,7 +45,7 @@ class HomePageVC: UIViewController {
 
 extension HomePageVC: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print("Todo name: \(searchText)")
+        viewModel.search(searchText: searchText)
     }
 }
 
@@ -77,7 +78,7 @@ extension HomePageVC: UITableViewDelegate, UITableViewDataSource {
 
             let okeyAction = UIAlertAction(title: "Delete", style: .destructive) {
                 action in
-                print("Delete todo: \(todo.todo_name)")
+                self.viewModel.delete(todo_id: todo.todo_id)
             }
             alert.addAction(okeyAction)
             self.present(alert, animated: true)

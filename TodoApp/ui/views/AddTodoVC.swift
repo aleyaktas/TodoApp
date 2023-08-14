@@ -8,9 +8,11 @@
 import UIKit
 
 class AddTodoVC: UIViewController {
-
     
     @IBOutlet weak var todoTextField: UITextField!
+    
+    var viewModel = AddTodoVM()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.tintColor = .systemOrange
@@ -18,10 +20,7 @@ class AddTodoVC: UIViewController {
     
     @IBAction func saveButtonAct(_ sender: UIButton) {
         if let todo = todoTextField.text {
-            save(todo_name:todo)
+            viewModel.save(todo_name: todo)
         }
-    }
-    func save(todo_name:String) {
-        print("Save Todo: \(todo_name)")
     }
 }
