@@ -27,8 +27,15 @@ class DetailTodoVC: UIViewController {
         if let todoName = todoTextField.text,
            let todo {
             viewModel.update(todo_id: todo.todo_id, todo_name: todoName)
+            let alertController = UIAlertController(title: "Success",
+                message: "Updated todo: \(todoName)",
+                preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Okey", style: .default, handler: nil)
+            alertController.addAction(okAction)
+            present(alertController, animated: true, completion: nil)
+            }
         }
-    }
+    
     
 
 
