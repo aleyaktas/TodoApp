@@ -13,6 +13,7 @@ class HomePageVM {
     var todoList = BehaviorSubject<[Todo]>(value: [Todo]())
     
     init() {
+        copyDatabase()
         todoList = krepo.todoList
     }
     
@@ -26,5 +27,26 @@ class HomePageVM {
     
     func uploadTodos() {
         krepo.uploadTodos()
+    }
+    
+    func copyDatabase() {
+        let bundlePath = Bundle.main.path(forResource: "todo", ofType: ".sqlite")
+        
+        let filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+        let databaseURL = URL(fileURLWithPath: filePath).appendingPathComponent("todo.sqlite")
+        
+        let fm = FileManager.default
+        
+        if fm.fileExists(atPath: databaseURL.path()) {
+            print("Database already exist")
+        }else {
+            do {
+                try fm.copyItem(atPath: bundlePath!, toPath: databaseURL.path)
+            } catch{
+                print(error.localizedDescription)
+            }
+        }
+        
+        
     }
 }

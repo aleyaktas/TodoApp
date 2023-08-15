@@ -21,6 +21,12 @@
 		A64BBC272A78ED870061ACD8 /* DetailTodoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64BBC262A78ED870061ACD8 /* DetailTodoVC.swift */; };
 		A64BBC292A78ED940061ACD8 /* AddTodoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64BBC282A78ED940061ACD8 /* AddTodoVC.swift */; };
 		A64BBC2D2A78F20D0061ACD8 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A64BBC2C2A78F20D0061ACD8 /* Todo.swift */; };
+		A679479A2A8B4FBC00677B4F /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A679478F2A8B4FBB00677B4F /* FMDatabaseQueue.m */; };
+		A679479B2A8B4FBC00677B4F /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = A67947902A8B4FBB00677B4F /* FMDatabasePool.m */; };
+		A679479C2A8B4FBC00677B4F /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = A67947912A8B4FBB00677B4F /* FMDatabase.m */; };
+		A679479D2A8B4FBC00677B4F /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A67947972A8B4FBC00677B4F /* FMDatabaseAdditions.m */; };
+		A679479E2A8B4FBC00677B4F /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = A67947992A8B4FBC00677B4F /* FMResultSet.m */; };
+		A67947A02A8B51C300677B4F /* todo.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = A679479F2A8B51C300677B4F /* todo.sqlite */; };
 		A6D4C44A2A7D06D900369064 /* TodoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D4C4492A7D06D900369064 /* TodoCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +46,20 @@
 		A64BBC262A78ED870061ACD8 /* DetailTodoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTodoVC.swift; sourceTree = "<group>"; };
 		A64BBC282A78ED940061ACD8 /* AddTodoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoVC.swift; sourceTree = "<group>"; };
 		A64BBC2C2A78F20D0061ACD8 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		A679478B2A8B4F7700677B4F /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		A679478E2A8B4FBA00677B4F /* TodoApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TodoApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		A679478F2A8B4FBB00677B4F /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		A67947902A8B4FBB00677B4F /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		A67947912A8B4FBB00677B4F /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		A67947922A8B4FBB00677B4F /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		A67947932A8B4FBB00677B4F /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		A67947942A8B4FBB00677B4F /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		A67947952A8B4FBB00677B4F /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		A67947962A8B4FBC00677B4F /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		A67947972A8B4FBC00677B4F /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		A67947982A8B4FBC00677B4F /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		A67947992A8B4FBC00677B4F /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		A679479F2A8B51C300677B4F /* todo.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = todo.sqlite; sourceTree = "<group>"; };
 		A6D4C4492A7D06D900369064 /* TodoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +98,7 @@
 			children = (
 				A64BBC0D2A78ECA00061ACD8 /* TodoApp */,
 				A64BBC0C2A78ECA00061ACD8 /* Products */,
+				A679478A2A8B4F7600677B4F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +121,19 @@
 				A64BBC172A78ECA10061ACD8 /* Assets.xcassets */,
 				A64BBC192A78ECA10061ACD8 /* LaunchScreen.storyboard */,
 				A64BBC1C2A78ECA10061ACD8 /* Info.plist */,
+				A679479F2A8B51C300677B4F /* todo.sqlite */,
+				A67947942A8B4FBB00677B4F /* FMDatabase.h */,
+				A67947912A8B4FBB00677B4F /* FMDatabase.m */,
+				A67947922A8B4FBB00677B4F /* FMDatabaseAdditions.h */,
+				A67947972A8B4FBC00677B4F /* FMDatabaseAdditions.m */,
+				A67947952A8B4FBB00677B4F /* FMDatabasePool.h */,
+				A67947902A8B4FBB00677B4F /* FMDatabasePool.m */,
+				A67947932A8B4FBB00677B4F /* FMDatabaseQueue.h */,
+				A679478F2A8B4FBB00677B4F /* FMDatabaseQueue.m */,
+				A67947962A8B4FBC00677B4F /* FMDB.h */,
+				A67947982A8B4FBC00677B4F /* FMResultSet.h */,
+				A67947992A8B4FBC00677B4F /* FMResultSet.m */,
+				A679478E2A8B4FBA00677B4F /* TodoApp-Bridging-Header.h */,
 			);
 			path = TodoApp;
 			sourceTree = "<group>";
@@ -139,6 +173,14 @@
 				A64BBC2C2A78F20D0061ACD8 /* Todo.swift */,
 			);
 			path = entity;
+			sourceTree = "<group>";
+		};
+		A679478A2A8B4F7600677B4F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A679478B2A8B4F7700677B4F /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		A6D4C4482A7D06C300369064 /* tableview */ = {
@@ -184,6 +226,7 @@
 				TargetAttributes = {
 					A64BBC0A2A78ECA00061ACD8 = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 				};
 			};
@@ -214,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A64BBC1B2A78ECA10061ACD8 /* LaunchScreen.storyboard in Resources */,
+				A67947A02A8B51C300677B4F /* todo.sqlite in Resources */,
 				A64BBC182A78ECA10061ACD8 /* Assets.xcassets in Resources */,
 				A64BBC162A78ECA00061ACD8 /* Main.storyboard in Resources */,
 			);
@@ -228,15 +272,20 @@
 			files = (
 				A61442272A8AB2DE00176F72 /* TodosDaoRepository.swift in Sources */,
 				A64BBC132A78ECA00061ACD8 /* HomePageVC.swift in Sources */,
+				A679479B2A8B4FBC00677B4F /* FMDatabasePool.m in Sources */,
+				A679479C2A8B4FBC00677B4F /* FMDatabase.m in Sources */,
 				A614422A2A8AB32F00176F72 /* HomePageVM.swift in Sources */,
 				A614422E2A8AB35200176F72 /* AddTodoVM.swift in Sources */,
+				A679479E2A8B4FBC00677B4F /* FMResultSet.m in Sources */,
 				A64BBC2D2A78F20D0061ACD8 /* Todo.swift in Sources */,
+				A679479A2A8B4FBC00677B4F /* FMDatabaseQueue.m in Sources */,
 				A6D4C44A2A7D06D900369064 /* TodoCell.swift in Sources */,
 				A64BBC0F2A78ECA00061ACD8 /* AppDelegate.swift in Sources */,
 				A64BBC112A78ECA00061ACD8 /* SceneDelegate.swift in Sources */,
 				A64BBC292A78ED940061ACD8 /* AddTodoVC.swift in Sources */,
 				A64BBC272A78ED870061ACD8 /* DetailTodoVC.swift in Sources */,
 				A614422C2A8AB34A00176F72 /* DetailTodoVM.swift in Sources */,
+				A679479D2A8B4FBC00677B4F /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +430,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -398,6 +448,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = aleynaaktas.TodoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "TodoApp/TodoApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -408,6 +460,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -425,6 +478,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = aleynaaktas.TodoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "TodoApp/TodoApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
