@@ -21,6 +21,13 @@ class AddTodoVC: UIViewController {
     @IBAction func saveButtonAct(_ sender: UIButton) {
         if let todo = todoTextField.text {
             viewModel.save(todo_name: todo)
+            let alertController = UIAlertController(title: "Success",
+                message: "Add new todo: \(todo)",
+                preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Okey", style: .default, handler: nil)
+            alertController.addAction(okAction)
+            present(alertController, animated: true, completion: nil)
+            todoTextField.text = ""
         }
     }
 }

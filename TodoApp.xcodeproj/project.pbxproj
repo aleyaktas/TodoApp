@@ -113,15 +113,13 @@
 		A64BBC0D2A78ECA00061ACD8 /* TodoApp */ = {
 			isa = PBXGroup;
 			children = (
+				A67947A52A8B923100677B4F /* Application */,
 				A64BBC222A78ED030061ACD8 /* ui */,
 				A64BBC2A2A78F1F40061ACD8 /* data */,
-				A64BBC0E2A78ECA00061ACD8 /* AppDelegate.swift */,
-				A64BBC102A78ECA00061ACD8 /* SceneDelegate.swift */,
+				A67947A62A8B926300677B4F /* Resources */,
 				A64BBC142A78ECA00061ACD8 /* Main.storyboard */,
-				A64BBC172A78ECA10061ACD8 /* Assets.xcassets */,
 				A64BBC192A78ECA10061ACD8 /* LaunchScreen.storyboard */,
 				A67947A32A8B8EB200677B4F /* todo.sqlite */,
-				A64BBC1C2A78ECA10061ACD8 /* Info.plist */,
 				A67947942A8B4FBB00677B4F /* FMDatabase.h */,
 				A67947912A8B4FBB00677B4F /* FMDatabase.m */,
 				A67947922A8B4FBB00677B4F /* FMDatabaseAdditions.h */,
@@ -181,6 +179,24 @@
 				A679478B2A8B4F7700677B4F /* libsqlite3.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A67947A52A8B923100677B4F /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				A64BBC0E2A78ECA00061ACD8 /* AppDelegate.swift */,
+				A64BBC102A78ECA00061ACD8 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		A67947A62A8B926300677B4F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A64BBC172A78ECA10061ACD8 /* Assets.xcassets */,
+				A64BBC1C2A78ECA10061ACD8 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		A6D4C4482A7D06C300369064 /* tableview */ = {
@@ -434,7 +450,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TodoApp/Info.plist;
+				INFOPLIST_FILE = TodoApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -464,7 +480,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TodoApp/Info.plist;
+				INFOPLIST_FILE = TodoApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
