@@ -2,11 +2,33 @@
 
 UP School & Akbank IOS Bootcamp Homework-5
 
-# Application Images
+# Application Videos
 
-<div style="display: flex; flex-direction: row;">
-  <img src="https://github.com/aleyaktas/TodoApp/assets/76265779/ac5720a7-94d6-47fc-9136-07a3c8901d7f" alt="TodoApp1" width="200"/>
-  <img src="https://github.com/aleyaktas/TodoApp/assets/76265779/fabfd996-59ca-40c9-bedb-4f4760641640" alt="TodoApp2" width="200"/>
-  <img src="https://github.com/aleyaktas/TodoApp/assets/76265779/75564e6c-c287-4c27-85e3-d8cacc731dd5" alt="TodoApp3" width="200"/>
-</div>
+https://github.com/aleyaktas/TodoApp/assets/76265779/212773ac-c0ff-44a4-b949-29cbfc4e16b0
 
+# What I used in the project:
+- UITableView
+- UINavigationController
+- MVVM architectural
+- SQLite
+
+## Features
+
+- You can add, delete and update todo. allows you to see all your todos.
+
+## Getting Started
+
+To run the Todo App on your local machine, follow these steps:
+
+1. Clone this repository:
+
+```bash
+  git clone https://github.com/aleyaktas/TodoApp.git
+```
+
+2. Open the project in Xcode:
+
+```bash
+  cd TodoApp
+  open TodoApp.xcodeproj
+```
