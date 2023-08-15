@@ -40,6 +40,19 @@ class HomePageVC: UIViewController {
             }
         }
     }
+    
+    @IBAction func deleteAllTodos(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Delete All Todo", message: "Do you want delete all todos?", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        alert.addAction(cancelAction)
+
+        let okeyAction = UIAlertAction(title: "Delete", style: .destructive) {
+            action in
+            self.viewModel.deleteAllTodo()
+        }
+        alert.addAction(okeyAction)
+        present(alert, animated: true, completion: nil)
+    }
 }
 
 

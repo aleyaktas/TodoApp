@@ -52,6 +52,17 @@ class TodosDaoRepository {
         print("Delete todo: \(todo_id)")
     }
     
+    func deleteAllTodo() {
+        db?.open()
+        do {
+            try db!.executeUpdate("DELETE FROM todos", values: nil)
+        } catch  {
+            print(error.localizedDescription)
+        }
+        db?.close()
+        print("Deleted all todos")
+    }
+    
     func search(searchText:String) {
         db?.open()
         var list = [Todo]()

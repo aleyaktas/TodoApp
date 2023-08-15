@@ -21,6 +21,10 @@ class HomePageVM {
         krepo.delete(todo_id: todo_id)
         uploadTodos()
     }
+    func deleteAllTodo() {
+        krepo.deleteAllTodo()
+        uploadTodos()
+    }
     func search(searchText:String) {
         krepo.search(searchText: searchText)
     }
