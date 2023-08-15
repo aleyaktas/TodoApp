@@ -41,6 +41,17 @@ class TodosDaoRepository {
         print("Update Todo \(todo_id) \(todo_name)")
     }
     
+    func completeTodo(todo_id:Int,isCompleted: Bool) {
+        db?.open()
+        do {
+            try db!.executeUpdate("UPDATE todos SET isCompleted = ? WHERE id = ?", values: [isCompleted, todo_id])
+        } catch  {
+            print(error.localizedDescription)
+        }
+        db?.close()
+        print("Update Todo \(todo_id) \(isCompleted)")
+    }
+    
     func delete(todo_id:Int) {
         db?.open()
         do {
@@ -72,8 +83,9 @@ class TodosDaoRepository {
             while result.next() {
                 let id = Int(result.string(forColumn: "id"))!
                 let name = result.string(forColumn: "name")!
-                
-                let todo = Todo(todo_id: id, todo_name: name)
+                let isCompleted = result.int(forColumn: "isCompleted") == 0 ? false : true
+
+                let todo = Todo(todo_id: id, todo_name: name, isCompleted: isCompleted)
                 list.append(todo)
             }
             todoList.onNext(list) //tetikleme
@@ -95,8 +107,9 @@ class TodosDaoRepository {
             while result.next() {
                 let id = Int(result.string(forColumn: "id"))!
                 let name = result.string(forColumn: "name")!
+                let isCompleted = result.int(forColumn: "isCompleted") == 0 ? false : true
                 
-                let todo = Todo(todo_id: id, todo_name: name)
+                let todo = Todo(todo_id: id, todo_name: name, isCompleted: isCompleted)
                 list.append(todo)
             }
             todoList.onNext(list) //tetikleme

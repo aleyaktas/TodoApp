@@ -26,7 +26,7 @@
 		A679479C2A8B4FBC00677B4F /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = A67947912A8B4FBB00677B4F /* FMDatabase.m */; };
 		A679479D2A8B4FBC00677B4F /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A67947972A8B4FBC00677B4F /* FMDatabaseAdditions.m */; };
 		A679479E2A8B4FBC00677B4F /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = A67947992A8B4FBC00677B4F /* FMResultSet.m */; };
-		A67947A02A8B51C300677B4F /* todo.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = A679479F2A8B51C300677B4F /* todo.sqlite */; };
+		A67947A42A8B8EB200677B4F /* todo.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = A67947A32A8B8EB200677B4F /* todo.sqlite */; };
 		A6D4C44A2A7D06D900369064 /* TodoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D4C4492A7D06D900369064 /* TodoCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +59,7 @@
 		A67947972A8B4FBC00677B4F /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
 		A67947982A8B4FBC00677B4F /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		A67947992A8B4FBC00677B4F /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		A679479F2A8B51C300677B4F /* todo.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = todo.sqlite; sourceTree = "<group>"; };
+		A67947A32A8B8EB200677B4F /* todo.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = todo.sqlite; sourceTree = "<group>"; };
 		A6D4C4492A7D06D900369064 /* TodoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,8 +120,8 @@
 				A64BBC142A78ECA00061ACD8 /* Main.storyboard */,
 				A64BBC172A78ECA10061ACD8 /* Assets.xcassets */,
 				A64BBC192A78ECA10061ACD8 /* LaunchScreen.storyboard */,
+				A67947A32A8B8EB200677B4F /* todo.sqlite */,
 				A64BBC1C2A78ECA10061ACD8 /* Info.plist */,
-				A679479F2A8B51C300677B4F /* todo.sqlite */,
 				A67947942A8B4FBB00677B4F /* FMDatabase.h */,
 				A67947912A8B4FBB00677B4F /* FMDatabase.m */,
 				A67947922A8B4FBB00677B4F /* FMDatabaseAdditions.h */,
@@ -257,7 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A64BBC1B2A78ECA10061ACD8 /* LaunchScreen.storyboard in Resources */,
-				A67947A02A8B51C300677B4F /* todo.sqlite in Resources */,
+				A67947A42A8B8EB200677B4F /* todo.sqlite in Resources */,
 				A64BBC182A78ECA10061ACD8 /* Assets.xcassets in Resources */,
 				A64BBC162A78ECA00061ACD8 /* Main.storyboard in Resources */,
 			);

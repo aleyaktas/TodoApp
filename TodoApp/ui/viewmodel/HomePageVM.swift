@@ -33,6 +33,11 @@ class HomePageVM {
         krepo.uploadTodos()
     }
     
+    func completeTodo(todo_id:Int,isCompleted: Bool) {
+        krepo.completeTodo(todo_id: todo_id, isCompleted: isCompleted)
+        uploadTodos()
+    }
+    
     func copyDatabase() {
         let bundlePath = Bundle.main.path(forResource: "todo", ofType: ".sqlite")
         

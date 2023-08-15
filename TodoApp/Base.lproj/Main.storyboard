@@ -23,8 +23,8 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="HqB-81-J6I"/>
                                 </connections>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YsA-pD-TKK">
-                                <rect key="frame" x="0.0" y="211" width="393" height="607"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YsA-pD-TKK">
+                                <rect key="frame" x="0.0" y="204" width="393" height="607"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="todoCell" id="6W3-Po-mF5" customClass="TodoCell" customModule="TodoApp" customModuleProvider="target">
@@ -34,20 +34,32 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cg0-WN-aZK">
+                                                    <rect key="frame" x="28" y="20" width="49" height="35"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="checkmark.square" catalog="system" title="">
+                                                        <color key="baseForegroundColor" systemColor="systemGreenColor"/>
+                                                    </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="completeButtonAct:" destination="6W3-Po-mF5" eventType="touchUpInside" id="gwS-SC-EdI"/>
+                                                    </connections>
+                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Klo-JJ-FWf">
-                                                    <rect key="frame" x="36" y="23.333333333333329" width="321" height="28.666666666666671"/>
+                                                    <rect key="frame" x="82" y="23.333333333333329" width="56.666666666666657" height="28.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Klo-JJ-FWf" firstAttribute="leading" secondItem="4Jk-YM-C32" secondAttribute="leadingMargin" constant="16" id="YIt-9D-OYh"/>
-                                                <constraint firstItem="Klo-JJ-FWf" firstAttribute="centerY" secondItem="4Jk-YM-C32" secondAttribute="centerY" id="myP-F6-lun"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Klo-JJ-FWf" secondAttribute="trailing" constant="16" id="weK-7u-CpE"/>
+                                                <constraint firstItem="cg0-WN-aZK" firstAttribute="centerY" secondItem="4Jk-YM-C32" secondAttribute="centerY" id="6tE-Tb-ww3"/>
+                                                <constraint firstItem="cg0-WN-aZK" firstAttribute="leading" secondItem="4Jk-YM-C32" secondAttribute="leadingMargin" constant="8" id="j3S-Oi-i2L"/>
+                                                <constraint firstItem="Klo-JJ-FWf" firstAttribute="centerY" secondItem="4Jk-YM-C32" secondAttribute="centerY" id="mef-76-7cM"/>
+                                                <constraint firstItem="Klo-JJ-FWf" firstAttribute="leading" secondItem="cg0-WN-aZK" secondAttribute="trailing" constant="5" id="mmr-zC-gpp"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="completeButton" destination="cg0-WN-aZK" id="6cm-f5-xga"/>
                                             <outlet property="todoText" destination="Klo-JJ-FWf" id="VvS-oz-HXv"/>
                                         </connections>
                                     </tableViewCell>
@@ -217,9 +229,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="checkmark.square" catalog="system" width="128" height="114"/>
         <image name="todo" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

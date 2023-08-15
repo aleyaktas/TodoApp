@@ -53,6 +53,7 @@ class HomePageVC: UIViewController {
         alert.addAction(okeyAction)
         present(alert, animated: true, completion: nil)
     }
+    
 }
 
 
@@ -62,7 +63,13 @@ extension HomePageVC: UISearchBarDelegate {
     }
 }
 
-extension HomePageVC: UITableViewDelegate, UITableViewDataSource {
+extension HomePageVC: UITableViewDelegate, UITableViewDataSource, CompleteDelegate {
+    
+    func completeButton(indexPath: IndexPath) {
+        let todo = todoList[indexPath.row]
+        viewModel.completeTodo(todo_id: todo.todo_id, isCompleted: !todo.isCompleted)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return todoList.count
     }
@@ -71,8 +78,26 @@ extension HomePageVC: UITableViewDelegate, UITableViewDataSource {
         
         let todo = todoList[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "todoCell") as! TodoCell
-        cell.todoText.text = todo.todo_name
-        
+        cell.indexPath = indexPath
+        cell.cellProtocol = self
+
+        if todo.isCompleted {
+            cell.completeButton.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
+            cell.todoText.textColor = .gray
+            let attributedString = NSAttributedString(string: todo.todo_name, attributes: [
+                  NSAttributedString.Key.strikethroughStyle: NSUnderlineStyle.single.rawValue,
+                  NSAttributedString.Key.strikethroughColor: UIColor.black
+              ])
+                  
+            cell.todoText.attributedText = attributedString
+        } else {
+            cell.completeButton.setImage(UIImage(systemName: "square"), for: .normal)
+            cell.todoText.textColor = .black
+            cell.todoText.attributedText = nil 
+            cell.todoText.text = todo.todo_name
+
+        }
+        print(todo.isCompleted)
         return cell
     }
     
